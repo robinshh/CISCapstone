@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>None</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:Label ID="label1" runat="server" Text="UserName"></asp:Label>
+            <asp:TextBox ID="txtUsernamerunat=" server"></asp:TextBox>
+            <br />
+            <asp:Label ID="label1" runat="server" Text="FirstName"></asp:Label>
+            <asp:TextBox ID="txtFirstName=" server"></asp:TextBox>
+            <br />
+            <asp:Label ID="label1" runat="server" Text="LastName"></asp:Label>
+            <asp:TextBox ID="txtLastName=" server"></asp:TextBox>
+            <br />
+            <asp:ListBox id="lstUsers" runat="server" DataSourceID="sqlsrcUserTable" DataTextField="UserInfo" DataValueField="UserID"></asp:ListBox>
+        </div>
+        <asp:sqlDataSource id="sqlsrcUserTable" runat="server" ConnectionString="<%$ ConnectionStrings:TESTDB %>" SelectCommand="FirstName + ' '+LastName AS UserInfo, UserID FROM USERS"></asp:sqlDataSource>
+
+    </form>
+</body>
+</html>
